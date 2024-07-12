@@ -1,0 +1,6 @@
+.indexCss{
+    background-image: url('../../../assets/img/background.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height:100%; 
+}
