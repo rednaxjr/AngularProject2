@@ -1,4 +1,11 @@
-body{
-    height:100vh;
+html,
+body,
+.ng-scope {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100%;
 
 }

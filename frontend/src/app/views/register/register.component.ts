@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -7,6 +8,34 @@ import { Component } from '@angular/core';
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit  {
 
+  constructor(
+    private router: Router,
+    private userService: UserService,
+
+  ) {
+   
+  }
+
+
+  ngOnInit(): void {
+    console.log("aaa")
+  }
+
+  async testt() {
+    console.log("Aaaaaaaaa")
+  }
+  async submit() {
+    console.log("aaa")
+    const data = {
+      name: "Sample"
+    }
+    this.userService.test(data).subscribe((res: any) => {
+
+      console.log(res)
+    }, (error) => {
+      console.log(error)
+    })
+  }
 }
