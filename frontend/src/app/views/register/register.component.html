@@ -1,6 +1,6 @@
 <div class="ng-scope">
 
-   <div class="w-2/6 h-700 bg-white rounded-[8px]">
+   <div class="w-2/6 h-[450px] bg-white rounded-[8px]">
       <div class="content-wrapper px-4 py-2">
          <h2>Register</h2>
          <form [formGroup]="registrationForm" (ngSubmit)="handleSubmit()">
@@ -19,21 +19,30 @@
                </div>
             </div>
 
-            <div class="flex flex-col w-full ">
+            <div class="flex flex-col w-full mt-2">
                <label for="email">
                   Email
                </label>
                <input type="email" formControlName="email" />
             </div>
-            <div class="flex flex-col w-full ">
+            <div class="flex flex-col w-full  mt-2">
                <label for="password">
-                  password
+                  Password
                </label>
                <input type="password" formControlName="password" />
             </div>
-
-            <button type="submit"
-               class="border-2 border-gray-600 text-white bg-green-600 py-3 px-6">Submit</button>
+            <div class="flex flex-col w-full  mt-2">
+               <label for="password">
+                  Re-Type Password
+               </label>
+               <input type="password" formControlName="password" />
+            </div>
+            <div class="flex  w-full  justify-center mt-10">
+               <button type="submit"
+                  class="border border-gray-200 text-white bg-blue-600 py-3 px-12 rounded-[8px] mr-10" routerLink="">Back</button>
+               <button type="submit"
+                  class="border border-gray-200 text-white bg-green-600 py-3 px-12 rounded-[8px]">Submit</button>
+            </div>
          </form>
       </div>
    </div>

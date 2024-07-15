@@ -109,12 +109,13 @@ router.post('/insertData', (req, res) => {
             positions = result;
             console.log(positions.length);
             const newData = [
-                data.fname, data.lname, data.email, data.pass, positionId
+                data.fname, 
+                data.lname, 
+                data.email, 
+                data.pass, 
+                positionId
 
             ];
-
-
-
             var positionId = getRandomInt(positions.length);
             console.log(positionId)
             var query = "INSERT INTO user(first_name, last_name, email, password , positionId) values (?,?,?,?,?)";
