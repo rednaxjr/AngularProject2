@@ -34,7 +34,7 @@ export class IndexComponent implements OnInit {
     const data = {
       name: "Sample"
     }
-    this.userService.test(data).subscribe((res: any) => {
+    this.userService.test().subscribe((res: any) => {
 
       console.log(res)
     }, (error) => {

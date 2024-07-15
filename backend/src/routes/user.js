@@ -55,8 +55,8 @@ router.delete('/deleteById/:id', (req, res) => {
     })
 });
 
-router.put('/update', (req, res) => { 
-    const data = req.body; 
+router.put('/update', (req, res) => {
+    const data = req.body;
     var findUser = "Select * from user where id=?";
 
     var newData = [
@@ -97,7 +97,7 @@ router.put('/update', (req, res) => {
         }
 
     })
- 
+
 });
 
 //post json
@@ -108,11 +108,17 @@ router.post('/insertData', (req, res) => {
         if (!err) {
             positions = result;
             console.log(positions.length);
+            const newData = [
+                data.fname, data.lname, data.email, data.pass, positionId
+
+            ];
+
+
 
             var positionId = getRandomInt(positions.length);
             console.log(positionId)
-            var query = "INSERT INTO user(first_name, last_name, positionId) values (?,?,?)";
-            connection.query(query, [data.fname, data.lname, positionId], (err, result) => {
+            var query = "INSERT INTO user(first_name, last_name, email, password , positionId) values (?,?,?,?,?)";
+            connection.query(query, newData, (err, result) => {
                 if (!err) {
                     return res.json({
                         data: result
