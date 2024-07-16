@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { UserService } from '../../services/user.service';
-import { MaterialModule } from '../../shared/material.module';
+import { UserService } from '../../services/user.service'; 
 import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { ReactiveFormsModule , Validators} from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -26,10 +25,15 @@ export class RegisterComponent implements OnInit {
 
   ) {
 
-  }
+  } 
 
-  ngOnInit(): void {
-    console.log("aaa")
+  ngOnInit(): void { 
+    this.userService.test().subscribe((res: any) => {
+
+      console.log(res)
+    }, (error) => {
+      console.log(error)
+    })
   }
 
   async testt() {

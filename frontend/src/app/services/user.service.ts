@@ -21,7 +21,7 @@ export class UserService {
   test() {
     return this.httpClient.get(this.url + "/user")
   }
-    registerAccount(data: any) {
+  registerAccount(data: any) {
     return this.httpClient.post(this.url + "/user/insertData", data, this.headers)
   }
 

@@ -1,5 +1,64 @@
-<div class="flex justify-center items-center h-full w-full">
-        <div class="h-600 w-1/2 bg-white rounded-10">
+<div class="   h-full w-full">
+        <div
+                class="h-full w-full flex justify-center items-center overflow-y-auto   ">
+                <div
+                        class="h-full md:lg:xl:2xl:h-3/4  rounded-10 w-full lg:xl:2xl:w-[80%] bg-white flex   ">
 
+                        <div
+                                class="w-full  lg:xl:2xl:p-8 hidden lg:xl:2xl:block ">
+                                <div class="border-2 h-full">
+                                </div>
+                        </div>
+                        <div
+                                class="relative flex flex-col h-full w-full px-5 py-2   md:w-full lg:xl:2xl:w-[50%]  ">
+                                <div class="h-full   relative   ">
+
+                                        <p
+                                                class="text-[46px]   pt-10 h-auto">
+                                                Sign in
+                                        </p>
+                                        <div class=" ">
+                                                <label for="email">Email
+                                                        Address</label>
+                                                <div
+                                                        class="relative mt-2  w-full">
+                                                        <input type="text"
+                                                                [(ngModel)]="email"
+                                                                name="email"
+                                                                class="w-full">
+                                                        <div
+                                                                class="absolute top-0 left-0">
+                                                        </div>
+                                                </div>
+                                                <div></div>
+                                        </div>
+                                        <div class="mt-4 ">
+                                                <label
+                                                        for="password">Password</label>
+                                                <div
+                                                        class="relative mt-2  w-full">
+                                                        <input type="text"
+                                                                [(ngModel)]="password"
+                                                                name="password"
+                                                                class="w-full">
+                                                        <div class="absolute">
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <p
+                                                class="text-end text-sm  text-blue-700 pt-5 cursor-pointer">Forgot
+                                                password?</p>
+
+                                        <button type="submit"
+                                                class="   text-white bg-green-600 mt-2 py-3 px-12 rounded-[8px] m-auto w-full">Submit</button>
+                                        <p
+                                                class="text-center text-sm  text-blue-700 pt-5 cursor-pointer"
+                                                routerLink="register">Create
+                                                an
+                                                Account</p>
+                                </div>
+                        </div>
+                </div>
         </div>
- </div>
+</div>
