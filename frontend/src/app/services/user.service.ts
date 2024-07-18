@@ -10,7 +10,7 @@ export class UserService {
 
   // url = environment.url;
   // header = environment.headers;
-  url = "http://localhost:3333";
+  url = "http://localhost:3000/api";
   headers = {
     headers: new HttpHeaders().set('Content-Type', "application/json")
   }

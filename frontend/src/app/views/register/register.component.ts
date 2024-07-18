@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
     lname: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
+    repass: new FormControl('', [Validators.required]),
   });
   constructor(
     private router: Router,
@@ -28,16 +29,11 @@ export class RegisterComponent implements OnInit {
   } 
 
   ngOnInit(): void { 
-    this.userService.test().subscribe((res: any) => {
-
-      console.log(res)
-    }, (error) => {
-      console.log(error)
-    })
+  
   }
 
   async testt() {
-    console.log("Aaaaaaaaa")
+    
   }
   async submit() {
     console.log("aaa")
@@ -57,6 +53,7 @@ export class RegisterComponent implements OnInit {
       lname: this.registrationForm.value.lname,
       email: this.registrationForm.value.email,
       pass: this.registrationForm.value.password,
+      repass:this.registrationForm.value.repass,
     }
     console.log(data)
 

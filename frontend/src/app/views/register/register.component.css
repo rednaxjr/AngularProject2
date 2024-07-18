@@ -17,6 +17,7 @@ input[type="text"], input[type="email"],
   padding:5px 10px 5px;
   border:1px solid  rgb(75 85 99);
   border-radius: 8px;
+  width:100%;
 }
 
 .example-form {

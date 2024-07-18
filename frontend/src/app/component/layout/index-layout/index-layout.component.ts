@@ -8,5 +8,5 @@ import { Routes, RouterModule } from '@angular/router';
   styleUrl: './index-layout.component.css'
 })
 export class IndexLayoutComponent {
-
+  indexBG= '~/src/assets/img/background.jpg';
 }

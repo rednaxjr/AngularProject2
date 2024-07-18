@@ -11,4 +11,5 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'frontend';
+  indexBG= 'src/assets/img/background.jpg';
 }

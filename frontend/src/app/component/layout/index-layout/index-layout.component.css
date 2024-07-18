@@ -1,12 +1,6 @@
 .indexCss{
-    background-image: url('../../../assets/img/background.jpg');
-    background-repeat: no-repeat; 
-    background-size: cover;
-    height:100vh; 
-    width: 100%;  
-    display: flex;
-    justify-content: center;
-    overflow:auto;
+    /* background-image: url('./assets/img/background.jpg'); */
+  
 }
 .content-wrapper{
     height:100vh;
