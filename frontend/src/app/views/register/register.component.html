@@ -10,48 +10,92 @@
             </div>
          </div> -->
 
-         <form [formGroup]="registrationForm" (ngSubmit)="handleSubmit()" class="w-full">
+         <form [formGroup]="registrationForm" (ngSubmit)="handleSubmit()"
+            class="w-full">
             <div>
                <p class="font-extrabold text-5xl">Register Account</p>
             </div>
             <div class="flex flex-row">
-               <div class="flex flex-col w-full mr-2">
+               <div class="flex flex-col w-full mr-2  ">
                   <label for="fname">
                      First Name
                   </label>
-                  <input type="text" formControlName="fname" placeholder="Enter your First Name" name="fname"/>
+                  <div class="relative">
+                     <input type="text" formControlName="fname"
+                        placeholder="Enter your First Name" name="fname" />
+                     <div class="absolute top-1 left-1">
+                        <mat-icon aria-hidden="false"
+                           aria-label="Example home icon"
+                           fontIcon="person"></mat-icon>
+                     </div>
+                  </div>
                </div>
                <div class="flex flex-col w-full  ml-2">
                   <label for="fname">
                      Last Name
                   </label>
-                  <input type="text" formControlName="lname" placeholder="Enter your Las Name" name="lname"/>
+                  <div class="relative">
+                     <input type="text" formControlName="lname"
+                        placeholder="Enter your Las Name" name="lname" />
+                        <div class="absolute top-1 left-1">
+                           <mat-icon aria-hidden="false"
+                              aria-label="Example home icon"
+                              fontIcon="person"></mat-icon>
+                        </div>
+                  </div>
                </div>
             </div>
             <div class="flex flex-col w-full mt-2">
                <label for="email">
                   Email
                </label>
-               <input type="email" formControlName="email" placeholder="sample@youremail.com" name="email"/>
+               <div class="relative">
+                  <input type="email" formControlName="email"
+                  placeholder="sample@youremail.com" name="email" />
+                     <div class="absolute top-1 left-1">
+                        <mat-icon aria-hidden="false"
+                           aria-label="Example home icon"
+                           fontIcon="mail"></mat-icon>
+                     </div>
+               </div>
+               
             </div>
             <div class="flex flex-col w-full  mt-2">
                <label for="password">
                   Password
                </label>
-               <input type="password" formControlName="password" placeholder="Enter your password" name="password"/>
+               <div class="relative">
+                  <input type="password" formControlName="password"
+                  placeholder="Enter your password" name="password" />
+                     <div class="absolute top-1 left-1">
+                        <mat-icon aria-hidden="false"
+                           aria-label="Example home icon"
+                           fontIcon="lock"></mat-icon>
+                     </div>
+               </div>
+               
             </div>
             <div class="flex flex-col w-full  mt-2">
                <label for="password">
                   Re-Type Password
                </label>
-               <input type="password" formControlName="repass"  placeholder="Re enter your password" name="repass"/>
+               <div class="relative">
+               <input type="password" formControlName="repass"
+                  placeholder="Re enter your password" name="repass" />
+                  <div class="absolute top-1 left-1">
+                     <mat-icon aria-hidden="false"
+                        aria-label="Example home icon"
+                        fontIcon="lock"></mat-icon>
+                  </div>
+               </div>
             </div>
             <div class="flex  w-full  justify-center mt-10">
                <button type="submit"
-                  class="border border-gray-200 text-white bg-blue-600 py-3 px-12 rounded-[8px] mr-10" routerLink="">Back</button>
+                  class="border border-gray-200 text-white bg-blue-600 py-3 px-12 rounded-[8px] mr-10"
+                  routerLink>Back</button>
                <button type="submit"
                   class="border border-gray-200 text-white bg-green-600 py-3 px-12 rounded-[8px]">Submit</button>
-            </div> 
+            </div>
          </form>
       </div>
    </div>

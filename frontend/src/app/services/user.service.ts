@@ -10,7 +10,7 @@ export class UserService {
 
   // url = environment.url;
   // header = environment.headers;
-  url = "http://localhost:3000/api";
+  url = "http://localhost:3000/api/user";
   headers = {
     headers: new HttpHeaders().set('Content-Type', "application/json")
   }
@@ -18,12 +18,18 @@ export class UserService {
     private httpClient: HttpClient
   ) { }
 
-  test() {
-    return this.httpClient.get(this.url + "/user")
+  getAllUsers() {
+    return this.httpClient.get(this.url + "/")
   }
   registerAccount(data: any) {
-    return this.httpClient.post(this.url + "/user/insertData", data, this.headers)
+    return this.httpClient.post(this.url + "/insertData", data, this.headers)
   }
+  deleteAccount(data: any) {
+    return this.httpClient.delete(this.url + "/deleteById/"+data,)
+  }
+  // (){
+  //   return this.httpClient.get()
+  // }
 
 
 }

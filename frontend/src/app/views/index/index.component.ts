@@ -28,6 +28,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.testt();
+    this.submit();
   }
 
   async testt() {
@@ -38,7 +39,7 @@ export class IndexComponent implements OnInit {
     const data = {
       name: "Sample"
     }
-    this.userService.test().subscribe((res: any) => {
+    this.userService.getAllUsers().subscribe((res: any) => {
 
       console.log(res)
     }, (error) => {

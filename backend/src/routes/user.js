@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.delete('/deleteById/:id', (req, res) => {
-    console.log("aaa")
+    console.log("delete ni")
     var id = req.params.id;
     var query = "Delete from user where id=?";
     connection.query(query, [id], (err, result) => {
